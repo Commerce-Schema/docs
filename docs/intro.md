@@ -17,10 +17,7 @@ There are large, sophisticated tools that can be leveraged for eCommerce — suc
 
 *The “Time to Value” of implementing enterprise tools from scratch is low. Total cost of ownership of these tools is often too high.*
 
-<aside>
-🤔 **TLDR; eCommerce data strategies are nascent, because we aren’t working together as a community.**
-
-</aside>
+**TLDR** 🤔 ; eCommerce data strategies are nascent, because we aren’t working together as a community.
 
 ## Solution
 
@@ -37,7 +34,7 @@ Data warehousing and cloud computer have almost become a commodity. With AI, bui
 
 With these shared specifications (really, a shared *point of view*), we can collectively start building composable analytics solutions for eCommerce, that might look like the following.
 
-[https://www.figma.com/file/fCkYgpk7Zp2EtTpjkcNqmG/The-Modern-Data-Stack-for-eCommerce?type=whiteboard&node-id=0-1&t=0QoQ2Zt87pWzH64P-0](https://www.figma.com/file/fCkYgpk7Zp2EtTpjkcNqmG/The-Modern-Data-Stack-for-eCommerce?type=whiteboard&node-id=0-1&t=0QoQ2Zt87pWzH64P-0)
+[Figma Board - The Modern Data-Stack for eCommerce](https://www.figma.com/file/fCkYgpk7Zp2EtTpjkcNqmG/The-Modern-Data-Stack-for-eCommerce?type=whiteboard&node-id=0-1&t=0QoQ2Zt87pWzH64P-0)
 
 *(Apologies for the bias towards Fueled, but as an example, it hopefully stands.)*
 
@@ -46,4 +43,4 @@ With these shared specifications (really, a shared *point of view*), we can coll
 To get started, we need to:
 
 1. Agree to a handful of high-level specifications for working with eCommerce data.
-2. Once we have those specifications, we can begin to leverage tools like dbt, Google Datafold, and semantic layers (like Cube.dev) to transform, blend, and work with various sources of 1st-party and eCommerce data.
+2. Once we have those specifications, we can begin to leverage tools like [dbt](https://docs.getdbt.com/), Google [Dataflow](https://cloud.google.com/dataflow?hl=en), and semantic layers (like [Cube.dev](https://cube.dev/)) to transform, blend, and work with various sources of 1st-party and eCommerce data.
