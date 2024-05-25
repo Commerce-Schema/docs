@@ -2,6 +2,21 @@
 
 **Work in Progress**
 
+## Overview
+
+The Universal Commerce Schema is a comprehensive data model designed to capture and represent various aspects of a commerce system. It is structured to provide detailed insights into transactions, products, customers, inventory, marketing, and related events. This schema is presented as an Entity-Relationship Diagram (ERD), showcasing the relationships and attributes of different entities within the commerce ecosystem.
+
+## Purpose
+
+The primary purpose of this schema is to facilitate data integration, cleaning, and enrichment in the silver layer of a data analytics pipeline. It provides a structured and standardized representation of commerce data, making it suitable for analytical purposes, reporting, and generating business insights.
+
+## Entity-Relationship Diagram (ERD)
+
+The ERD visually represents the relationships between entities in the Universal Commerce Schema. It shows how entities such as orders, products, customers, and stores are interconnected, and the attributes associated with each entity. This diagram serves as a blueprint for understanding the data structure and how different parts of the commerce system interact with each other.
+
+---
+
+Feel free to customize this document further to match your specific requirements and the level of detail you wish to include.
 ```mermaid
 erDiagram
     orders ||--o{ order_line_items : "1..*"
@@ -1239,3 +1254,56 @@ erDiagram
     }
 ```
 
+## Key Components
+
+### Orders and Order Line Items
+
+- **Orders**: Represents individual customer orders, capturing details such as order ID, customer ID, market ID, store ID, payment ID, order total, order status, and timestamps.
+- **Order Line Items**: Represents items within an order, capturing details such as order item ID, product variant store ID, price, tax, shipping, discount, and quantity.
+
+### Product Listings and Products
+
+- **Product Listings**: Represents listings of products available for sale in different markets and stores, capturing details such as product list ID, market ID, store ID, price, and status.
+- **Products**: Represents individual products, capturing details such as product ID, name, type, tags, supplier ID, category, brand, and status.
+- **Product Variants**: Represents variations of a product, capturing details such as variant ID, SKU, color, size, weight, and status.
+
+### Stores and Inventory History
+
+- **Stores**: Represents physical or online store locations, capturing details such as store ID, market ID, location, address, and contact information.
+- **Inventory History**: Represents **daily** snapshots in inventory levels for product variants in stores, capturing details such as product variant store ID, inventory quantity, and timestamps.
+- **Price History**: Represents historical changes in product pricing, capturing details such as price, currency, store ID, market ID, and timestamps.
+- **Inventory Cost History**: Represents historical changes in inventory costs, capturing details such as cost, currency, store ID, supplier ID, and quantity received.
+
+### Customers and Customer Addresses
+
+- **Customers**: Represents individual customers, capturing details such as customer ID, name, email, phone number, status, and timestamps.
+- **Customer Addresses**: Represents addresses associated with customers, capturing details such as address ID, customer ID, address details, and timestamps.
+
+### Suppliers and Product Suppliers
+
+- **Suppliers**: Represents suppliers of products, capturing details such as supplier ID, name, address, contact information, and status.
+- **Product Suppliers**: Represents the relationship between products and their suppliers, capturing details such as product ID, supplier ID, and timestamps.
+
+### Marketing and Campaigns
+
+- **Audiences**: Represents customer segments targeted by marketing campaigns, capturing details such as audience ID, customer ID, and timestamps.
+- **Ad Campaigns**: Represents advertising campaigns targeting specific audiences, capturing details such as campaign ID, audience ID, platform ID, and timestamps.
+- **Ads**: Represents individual advertisements within a campaign, capturing details such as ad ID, campaign ID, and timestamps.
+- **Ad Impressions**: Represents instances of ad views, capturing details such as impression ID, ad ID, and timestamps.
+- **Email Campaigns**: Represents email marketing campaigns targeting audiences, capturing details such as campaign ID, audience ID, and timestamps.
+- **Emails**: Represents individual emails sent as part of a campaign, capturing details such as email ID, campaign ID, and timestamps.
+- **Emails Sent**: Represents instances of emails being sent, capturing details such as email sent ID, email ID, and timestamps.
+
+### Events
+
+- **Events**: Represents various customer activities and interactions across different stages of the purchase process, capturing details such as event type, timestamp, user details, and context information.
+
+### Supporting Entities
+
+- **Currency**: Represents currency details, capturing details such as currency name, date, and exchange rate.
+- **Markets**: Represents different markets where products are sold, capturing details such as market ID and name.
+- **Store Markets**: Represents the relationship between stores and markets, capturing details such as store ID and market ID.
+- **Households**: Represents households associated with customers, capturing details such as household ID and customer ID.
+- **Employees**: Represents employees working at stores, capturing details such as employee ID, store ID, name, and employment dates.
+- **Order Discounts**: Represents discounts applied to orders, capturing details such as discount ID, order ID, discount code, amount, and type.
+- **Order Shipping Services**: Represents shipping services used for order items, capturing details such as shipping line ID, order ID, item ID, shipping code, and carrier information.
