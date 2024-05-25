@@ -1270,7 +1270,7 @@ erDiagram
 ### Stores and Inventory History
 
 - **Stores**: Represents physical or online store locations, capturing details such as store ID, market ID, location, address, and contact information.
-- **Inventory History**: Represents historical changes in inventory levels for product variants in stores, capturing details such as product variant store ID, inventory quantity, and timestamps.
+- **Inventory History**: Represents **daily** snapshots in inventory levels for product variants in stores, capturing details such as product variant store ID, inventory quantity, and timestamps.
 - **Price History**: Represents historical changes in product pricing, capturing details such as price, currency, store ID, market ID, and timestamps.
 - **Inventory Cost History**: Represents historical changes in inventory costs, capturing details such as cost, currency, store ID, supplier ID, and quantity received.
 
